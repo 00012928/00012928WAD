@@ -16,6 +16,8 @@ builder.Services.AddDbContext<ContactManagerDbContext>(
         builder.Configuration.GetConnectionString("ContactManagerConnectionStr")));
 
 builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+
 
 var app = builder.Build();
 

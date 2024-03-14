@@ -7,5 +7,6 @@ namespace _00012928.Data
     {
         public ContactManagerDbContext(DbContextOptions<ContactManagerDbContext> options) : base(options) { }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

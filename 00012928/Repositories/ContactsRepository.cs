@@ -13,11 +13,11 @@ namespace _00012928.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<Contact>> GetAllContacts() => await _dbContext.Contacts.ToArrayAsync();
+        public async Task<IEnumerable<Contact>> GetAllContacts() => await _dbContext.Contacts.Include(c => c.Category).ToArrayAsync();
 
         public async Task<Contact> GetContactById(int id)
         {
-            return await _dbContext.Contacts.FirstOrDefaultAsync(c => c.Id == id);
+            return await _dbContext.Contacts.Include(c => c.Category).FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task CreateContact(Contact contact)
