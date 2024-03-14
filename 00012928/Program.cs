@@ -1,4 +1,5 @@
 using _00012928.Data;
+using _00012928.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ContactManagerDbContext>(
     options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("ContactManagerConnectionStr")));
+
+builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
 
 var app = builder.Build();
 
