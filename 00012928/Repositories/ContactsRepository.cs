@@ -20,6 +20,7 @@ namespace _00012928.Repositories
             return await _dbContext.Contacts.Include(c => c.Category).FirstOrDefaultAsync(c => c.Id == id);
         }
 
+        // This project is created by 00012928
         public async Task CreateContact(Contact contact)
         {
             await _dbContext.Contacts.AddAsync(contact);

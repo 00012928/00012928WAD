@@ -20,6 +20,7 @@ namespace _00012928.Repositories
             return await _dbContext.Categories.FirstOrDefaultAsync(c => c.Id == id);
         }
 
+        // This project is created by 00012928 and the following lines were pushed on second third commit
         public async Task CreateCategory(Category category)
         {
             await _dbContext.Categories.AddAsync(category);

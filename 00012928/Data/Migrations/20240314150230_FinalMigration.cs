@@ -8,6 +8,7 @@ namespace _00012928.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            // Bugs occurred here while creating table, but were fixed by 00012928
             migrationBuilder.CreateTable(
                 name: "Categories",
                 columns: table => new
@@ -20,6 +21,7 @@ namespace _00012928.Data.Migrations
                 {
                     table.PrimaryKey("PK_Categories", x => x.Id);
                 });
+            // This project is created by 00012928
 
             migrationBuilder.CreateTable(
                 name: "Contacts",

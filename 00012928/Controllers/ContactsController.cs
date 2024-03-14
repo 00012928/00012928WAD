@@ -24,6 +24,7 @@ namespace _00012928.Controllers
             _contactsRepository = contactsRepository;
         }
 
+        // All controllers were edited accordingly by following seminars
         // GET: api/Contacts
         [HttpGet]
         public async Task<IEnumerable<Contact>> GetContacts()
@@ -45,6 +46,7 @@ namespace _00012928.Controllers
             return Ok(contact);
         }
 
+        // This project is created by 00012928
         // PUT: api/Contacts/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
