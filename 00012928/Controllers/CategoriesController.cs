@@ -11,11 +11,10 @@ using _00012928.Repositories;
 
 namespace _00012928.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly ContactManagerDbContext _context;
         private readonly ICategoriesRepository _categoriesRepository;
 
         public CategoriesController(ICategoriesRepository categoriesRepository)

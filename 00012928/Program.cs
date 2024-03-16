@@ -15,6 +15,16 @@ builder.Services.AddDbContext<ContactManagerDbContext>(
     options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("ContactManagerConnectionStr")));
 
+// Used CORS to prevent CORS-related errors that might occur while fetching data from API
+var allowedOrigins = "AnyOrigin";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowedOrigins, policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
 builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
 
@@ -33,5 +43,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseCors(allowedOrigins);
 app.Run();

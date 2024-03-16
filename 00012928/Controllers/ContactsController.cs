@@ -12,11 +12,10 @@ using NuGet.Protocol.Core.Types;
 
 namespace _00012928.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ContactsController : ControllerBase
     {
-        private readonly ContactManagerDbContext _context;
         private readonly IContactsRepository _contactsRepository;
 
         public ContactsController(IContactsRepository contactsRepository)
