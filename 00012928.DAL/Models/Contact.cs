@@ -17,7 +17,6 @@ namespace _00012928.Models
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("Name cannot be null or empty");
                 }
 
                 _name = value;

@@ -1,3 +1,15 @@
 table {
-    width: 100%;
-  }  
+  width: 100%;
+}
+
+.search {
+  border-radius: 8px;
+  border: 2px solid blue;
+  margin: 20px;
+  padding: 5px;
+  padding-right: 50px;
+}
+
+.search-text {
+  margin-left: 20px;
+}

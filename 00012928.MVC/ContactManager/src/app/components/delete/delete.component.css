@@ -1,0 +1,12 @@
+.flex-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

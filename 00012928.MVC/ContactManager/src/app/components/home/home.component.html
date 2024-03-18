@@ -1,4 +1,6 @@
 <div class="m-4">
+    <label for="searchInput" class="search-text">Search:</label>
+    <input id="searchInput" matInput (input)="applyFilter($event)" placeholder="Search" class="search">
     <table mat-table [dataSource]="itemsList" class="mat-elevation-z8">
         <ng-container matColumnDef="ID">
             <th mat-header-cell *matHeaderCellDef> ID </th>
