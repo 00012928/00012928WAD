@@ -1,0 +1,30 @@
+<div class="p-8 mt-8 flex justify-center">
+    <form class="shadow border w-4/12 p-4">
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" type="text" [(ngModel)]="createContact.name">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Phone Number</mat-label>
+                <input matInput name="phoneNumber" type="number" [(ngModel)]="createContact.phoneNumber">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Choose Category</mat-label>
+                <mat-select [(ngModel)]="cId" name="Category">
+                    @for(c of cate; track c)
+                    {
+                        <mat-option [value]="c.id">{{c.name}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="flex justify-center">
+            <button mat-raised-button color="primary" (click)="create()">Create</button>
+        </div>
+    </form>
+</div>
