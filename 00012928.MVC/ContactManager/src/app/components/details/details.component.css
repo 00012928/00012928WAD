@@ -1,0 +1,21 @@
+.details-card {
+    margin: 50px auto;
+    width: 20%;
+    background-color: #e3f2fd;
+    padding: 40px 0;
+    border: 1px solid blue;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.edit-button {
+    margin-right: 10px;
+}
+
+.back-button {
+    margin-right: 10px;
+}
+
+.font-bold {
+    font-weight: bold;
+}

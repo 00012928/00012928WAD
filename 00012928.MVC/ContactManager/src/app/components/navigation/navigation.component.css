@@ -1,0 +1,19 @@
+.toolbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.title {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create-button {
+    margin-left: 10px;
+}

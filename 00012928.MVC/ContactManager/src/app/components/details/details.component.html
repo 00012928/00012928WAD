@@ -1,13 +1,15 @@
-<div class="flex mt-8 justify-center">
-    <mat-card class="shadow w-4/12">
+<div class="flex justify-center mt-8">
+    <mat-card class="shadow details-card">
         <mat-card-content>
             <div class="p-8">
-                <h2 class="text-3x1 font-bold mb-4">{{detailsContact.name}}</h2>
-                <p class="text-gray-700">{{detailsContact.phoneNumber}}</p>
-                <div class="mt-4">
-                    <span class="text-gray-600">Category:</span>
-                    <mat-chip class="m1-2">{{detailsContact.category.name}}</mat-chip>
-                </div>
+                <p><span class="font-bold">Name:</span> {{detailsContact.name}}</p>
+                <p><span class="font-bold">Phone Number:</span> {{detailsContact.phoneNumber}}</p>
+                <p><span class="font-bold">Category:</span> {{detailsContact.category.name}}</p>
+            </div>
+            <div class="flex justify-end mt-4">
+                <button mat-raised-button color="primary" class="back-button" (click)="toHome()">Back</button>
+                <button mat-raised-button color="accent" class="edit-button" (click)="editClicked()">Edit</button>
+                <button mat-raised-button color="warn" class="ml-4" (click)="deleteClicked()">Delete</button>
             </div>
         </mat-card-content>
     </mat-card>

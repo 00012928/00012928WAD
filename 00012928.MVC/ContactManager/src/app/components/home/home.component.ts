@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { Contacts } from '../../Contacts';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { ContactManagerService } from '../../contact-manager.service';
 import { Router } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -38,18 +38,16 @@ export class HomeComponent {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.itemsList.filter = filterValue.trim().toLowerCase();
-  }  
+  }
 
-  e(id:number){
-    console.log("edit", id);
-    this.router.navigateByUrl("edit/"+id)
+  e(id: number) {
+    this.router.navigateByUrl("edit/" + id)
   }
-  dt(id:number){
-    console.log("details", id);
-    this.router.navigateByUrl("details/"+id)
+  dt(id: number) {
+    this.router.navigateByUrl("details/" + id)
   }
-  dl(id:number){
+  dl(id: number) {
     console.log("delete", id);
-    this.router.navigateByUrl("delete/"+id)
+    this.router.navigateByUrl("delete/" + id)
   }
 }

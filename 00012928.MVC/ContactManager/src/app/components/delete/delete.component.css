@@ -1,12 +1,26 @@
-.flex-container {
-    margin-top: 50px;
+.delete-container {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    height: 100vh;
 }
 
-.flex {
-    display: flex;
-    flex-direction: column;
+.delete-box {
+    background-color: #e3f2fd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    width: 60%;
+}
+
+.contact-details {
+    margin-bottom: 20px;
+}
+
+.delete-button {
+    margin-right: 20px;
+}
+
+.bold-text {
+    font-weight: bold;
 }

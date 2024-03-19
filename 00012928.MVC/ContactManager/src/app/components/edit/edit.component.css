@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-items: center;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.flex {
+    margin-bottom: 16px;
+}
+
+button {
+    margin-right: 8px;
+}
